@@ -10,9 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
-from pathlib import Path
-from dotenv import load_dotenv
 import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+
 
 load_dotenv()
 
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Мои приложения
     "learning_logs",
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+# Мои настройки.
+LOGIN_REDIRECT_URL = 'learning_logs:index'
