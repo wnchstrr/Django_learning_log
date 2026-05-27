@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     # Мои приложения
     "learning_logs",
     "accounts",
+    # Сторонние приложения
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
