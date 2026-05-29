@@ -1,0 +1,11 @@
+# Каждый маршрут описывает, как входящий URL будет обработан Platform.sh.
+
+
+"https://{default}/":
+  type: upstream
+  upstream: "learning_log"
+
+
+"https://www.{default}/":
+  type: redirect
+  to: "https://{default}/"
